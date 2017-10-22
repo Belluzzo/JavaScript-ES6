@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>02 - let</title>
+    </head>
+    <body>
+        <script>
+            var animal = 'cachorro';
+
+            {
+                var animal = 'gato';
+                console.log('Com var dentro do bloco: ' + animal);
+            }
+
+            console.log('Com var fora do bloco: ' + animal);
+
+            var animal = 'cachorrodog';
+
+            {
+                let animal = 'gato';
+                console.log('Com let dentro do bloco: ' + animal);
+            }
+
+            console.log('Com let fora do bloco: ' + animal);
+
+        </script>
+    </body>
+</html>
