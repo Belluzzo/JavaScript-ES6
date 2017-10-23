@@ -1,0 +1,27 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript ES6</title>
+    </head>
+    <body>
+        <script>
+            const matheus = {
+                nome: 'Matheus',
+                idade: 50
+            }
+
+            console.log(matheus);
+
+            //const não é imutável
+            matheus.idade = 24;
+
+            console.log(matheus);
+
+            Object.freeze(matheus);
+
+            matheus.idade = 30;
+
+            console.log(matheus);
+        </script>
+    </body>
+</html>
