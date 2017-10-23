@@ -1,0 +1,30 @@
+<DOCTYPE html>
+        <html>
+            <head>
+                <title>05 - Introdução Arrow Functions</title>
+            </head>
+            <body>
+                <script>
+                   const cidades = ['Uba', 'Tocantins', 'Rio Branco'];
+
+                    const love = cidades.map(function (nome) {
+                        return `Eu amo ${nome}`;
+                    });
+
+                    const loveArrow = cidades.map((nome) => {
+                        return `Eu amo ${nome}`;
+                    });
+
+                    const loveArrowSingleArg = cidades.map(nome => {
+                        return `Eu amo ${nome}`;
+                    });
+
+                    const loveArrowSingleArgOneLine = cidades.map(nome => `Eu amo ${nome}`);
+
+                    console.log(love);
+                    console.log(loveArrow);
+                    console.log(loveArrowSingleArg);
+                    console.log(loveArrowSingleArgOneLine);
+                </script>
+            </body>
+        </html>
