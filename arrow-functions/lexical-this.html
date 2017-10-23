@@ -1,0 +1,41 @@
+<DOCTYPE html>
+        <html>
+            <head>
+                <title>06 - Lexical this</title>
+            </head>
+            <body>
+                <button id="btn">Clique em mim!</button>
+                <button id="btn-make">Faça meu sanduíche!</button>
+                <script>
+                   const btn = document.getElementById("btn");
+                   btn.addEventListener('click', () => {
+                        console.log(this);
+                   });
+
+                   btn.addEventListener('click', function() {
+                        console.log(this);
+                   });
+
+                   const sanduiche = {
+                       pao: 'branco',
+                       queijo: 'cheddar',
+
+                       preparar: function () {
+                           return `Eu quero um sanduíche com pão ${this.pao} e queijo ${this.queijo}` ;
+                       },
+
+                       fazer: function () {
+                            window.setTimeout(() => {
+                                console.log(this.preparar());
+                            }, 500);
+                       }
+                   };
+
+                   const btn_make = document.getElementById("btn-make");
+                   btn_make.addEventListener('click', function() {
+                       sanduiche.fazer();
+                   });
+
+                </script>
+            </body>
+        </html>
