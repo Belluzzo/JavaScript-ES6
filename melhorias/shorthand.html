@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10 - Shorthand Properties</title>        
+    </head>
+    <body>
+        <script>
+            const name = 'Matheus';
+            const age = 24;
+            const city = 'Uba';
+
+            const person = {
+                name,
+                age,
+                city,
+
+                hello() {
+                    console.log(`Hello! My name is ${name}!`);
+                }
+            }
+
+            console.log(person);
+            person.hello();
+            
+        </script>
+    </body>
+</html>
