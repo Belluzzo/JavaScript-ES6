@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>09 - Tagged Templates</title>        
+    </head>
+    <style>
+        .green {
+            color: green;
+            font-size: 25px;
+        }
+    </style>
+    <body>
+        <script>
+            const city = 'Uba';
+            const state = 'MG';
+            const country = 'Brasil';
+
+            function green(template, ...values) {
+                return template.reduce((accumulator, part, i) => {
+                    //A primeira chamada  já traz o elemento [0] do template como o accumulator,
+                    //e a part é o elemento [1] do template
+                    //console.log(`i: ${i}   accumulator: ${accumulator}   part: ${part}`);
+                    return `
+                        ${accumulator} 
+                        <span class="green">${values[i - 1].toUpperCase()}</span> 
+                        ${part}
+                    `
+                });
+            }
+
+            const template = green`Eu moro em ${city} que fica no estado de ${state} - ${country}!`;
+
+            document.body.innerHTML = template;
+        </script>
+    </body>
+</html>
