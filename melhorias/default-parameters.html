@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>11 - Default Parameters</title>        
+    </head>
+    <body>
+        <script>
+            function hello(name = 'Matheus', surname = 'Belluzzo') {
+                console.log(`Hello ${name} ${surname}!`);
+            }
+        
+            hello();
+            hello('Bruno', 'Belluzzo');
+            hello('Pedro');
+        </script>
+    </body>
+</html>
